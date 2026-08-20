@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis Engineered | Enter the Blueprint</title>
+  <meta name="description" content="Explore the six days of creation through Wilbert Bouie Jr.'s Genesis Engineered interpretations.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="home-page">
+  <div class="progress-bar" aria-label="Your progress">
+    <span class="progress-label">Your Progress</span>
+    <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+    <strong id="progressCount">0/6</strong>
+  </div>
+
+  <main>
+    <section id="welcome" class="welcome-shell" aria-labelledby="pageTitle">
+      <div class="rays"></div><div class="glow"></div>
+      <div class="dam"><i></i><i></i><i></i></div>
+      <div class="welcome-copy">
+        <p class="eyebrow">Wilbert Bouie Jr.'s Genesis Engineered Interpretations</p>
+        <h1 id="pageTitle">GENESIS<br><span>ENGINEERED</span></h1>
+        <h2>Enter the Blueprint</h2>
+        <p class="intro">Genesis Chapter 1, read through an engineering lens.</p>
+      </div>
+      <button id="liftGate" class="gate-button" type="button">
+        <span>LIFT THE GATE <b>→</b></span><small>Open the six-day portal</small>
+      </button>
+      <div class="water" aria-hidden="true"></div>
+    </section>
+
+    <section id="portal" class="portal-section" hidden aria-labelledby="portalTitle">
+      <div class="portal-heading">
+        <p class="eyebrow">The Blueprint Portal</p>
+        <h2 id="portalTitle">Six Days. One Engineered Design.</h2>
+        <p>Select a day to enter its interpretation.</p>
+      </div>
+      <div class="day-grid">
+        <a class="day-card day-1" href="day-1.html"><span class="day-number">01</span><span class="day-icon">◐</span><h3>Separate the Waters</h3><p>Day One · Light and separation</p><span class="card-link">Enter day →</span></a>
+        <a class="day-card day-2" href="day-2.html"><span class="day-number">02</span><span class="day-icon">◒</span><h3>Expansion Above</h3><p>Day Two · The firmament</p><span class="card-link">Enter day →</span></a>
+        <a class="day-card day-3" href="day-3.html"><span class="day-number">03</span><span class="day-icon">◓</span><h3>Land and Seed</h3><p>Day Three · Systems emerge</p><span class="card-link">Enter day →</span></a>
+        <a class="day-card day-4" href="day-4.html"><span class="day-number">04</span><span class="day-icon">☼</span><h3>Lights in the Sky</h3><p>Day Four · Time and order</p><span class="card-link">Enter day →</span></a>
+        <a class="day-card day-5" href="day-5.html"><span class="day-number">05</span><span class="day-icon">◉</span><h3>Life in Motion</h3><p>Day Five · Water and wing</p><span class="card-link">Enter day →</span></a>
+        <a class="day-card day-6" href="day-6.html"><span class="day-number">06</span><span class="day-icon">✦</span><h3>Humanity and Purpose</h3><p>Day Six · The complete system</p><span class="card-link">Enter day →</span></a>
+      </div>
+      <button id="closePortal" class="text-button" type="button">← Return to the gate</button>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
