@@ -30,8 +30,19 @@ function completeDay(day) { activateProgress(day); }
 
 function chooseRandomHero() {
   const hero = document.querySelector('#heroImage'); if (!hero || !HERO_IMAGES.length) return;
-  hero.src = HERO_IMAGES[Math.floor(Math.random() * HERO_IMAGES.length)];
-  hero.addEventListener('error', () => { hero.alt='Genesis Engineered artwork could not be loaded'; hero.style.display='none'; }, {once:true});
+  let previous = Number(sessionStorage.getItem('gei-last-artifact'));
+  let index = Math.floor(Math.random() * HERO_IMAGES.length);
+  if (HERO_IMAGES.length > 1 && index === previous) index = (index + 1) % HERO_IMAGES.length;
+  sessionStorage.setItem('gei-last-artifact', String(index));
+  const chosen = HERO_IMAGES[index];
+  const preloaded = new Image();
+  preloaded.onload = () => { hero.src = chosen; hero.classList.add('artifact-ready'); };
+  preloaded.onerror = () => {
+    const fallback = HERO_IMAGES.find((_, i) => i !== index);
+    if (fallback) { hero.src = fallback; hero.classList.add('artifact-ready'); }
+    else { hero.alt = 'Genesis Engineered artwork could not be loaded'; hero.style.display = 'none'; }
+  };
+  preloaded.src = chosen;
 }
 
 function playTone(day, type = 'chime') {
