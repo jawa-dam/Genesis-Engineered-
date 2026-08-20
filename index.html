@@ -1,71 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Genesis Engineered 3.0 | Enter the Blueprint</title>
-  <meta name="description" content="Enter Wilbert Bouie Jr.'s Genesis Engineered Interpretations.">
-  <link rel="stylesheet" href="assets/styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Genesis Engineered — Enter the Blueprint</title>
+<meta name="description" content="Genesis Engineered Interpretations by Wilbert Bouie Jr. — enter the mountain gate and explore six days of the blueprint." />
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body class="home-page">
-  <div class="progress-bar">
-    <span class="progress-label">Your Progress</span>
-    <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
-    <strong id="progressCount">0/6</strong>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="stage">
+  <div class="blueprint-grid" aria-hidden="true"></div>
+  <div class="atmosphere" aria-hidden="true">
+    <span class="ray ray--a"></span>
+    <span class="ray ray--b"></span>
+    <span class="ray ray--c"></span>
+    <span class="mist mist--low"></span>
+    <span class="mist mist--mid"></span>
+    <span class="water-line"></span>
   </div>
 
-  <main>
-    <section id="welcome" class="welcome-shell" aria-labelledby="pageTitle">
-      <div class="sky-glow"></div>
-      <div class="game-grid" aria-hidden="true"></div>
-      <canvas id="waterCanvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <header class="masthead">
+      <span>GEI // BLUEPRINT-01</span>
+      <span class="ref" id="progress-track" aria-live="polite">
+        <span class="progress-dot" data-day="1"></span><span class="progress-dot" data-day="2"></span><span class="progress-dot" data-day="3"></span><span class="progress-dot" data-day="4"></span><span class="progress-dot" data-day="5"></span><span class="progress-dot" data-day="6"></span>
+        <span class="progress-label" id="progress-label">0/6</span>
+      </span>
+    </header>
 
-      <div class="mountain-scene" aria-hidden="true">
-        <div class="mountain mountain-back"></div>
-        <div class="mountain mountain-main"></div>
-        <div class="mountain-snow"></div>
-        <div class="mist mist-one"></div>
-        <div class="mist mist-two"></div>
-        <div class="lake"></div>
-      </div>
+    <main id="main">
+      <section class="hero" aria-label="Genesis Engineered entrance">
+        <h1 class="title">GENESIS ENGINEERED</h1>
+        <p class="subtitle">Enter the Blueprint</p>
 
-      <div class="portal-ring" aria-hidden="true"><span></span><span></span></div>
+        <div class="portal-frame">
+          <span class="portal-glow" aria-hidden="true"></span>
+          <span class="portal-ring portal-ring--outer" aria-hidden="true"></span>
+          <span class="portal-ring portal-ring--inner" aria-hidden="true"></span>
+          <img id="hero-art" class="hero-art" alt="" width="420" height="420" />
+          <p id="hero-art-fallback" class="hero-art-fallback" hidden>
+            The gate artwork could not load, but the blueprint still opens below.
+          </p>
+          <span class="coord-readout" aria-hidden="true">ELEV. 14,022 FT // GEN 1:1–2</span>
+        </div>
 
-      <div class="hero-image-wrap">
-        <img id="heroImage" alt="Genesis Engineered artwork" loading="eager" decoding="async">
-      </div>
+        <button type="button" id="enter-btn" class="btn" aria-expanded="false" aria-controls="portal-section">
+          Enter the Engine
+        </button>
+        <p class="enter-hint">Wilbert Bouie Jr.'s reading of Genesis 1, as a working hydraulic system.</p>
+      </section>
 
-      <div class="welcome-copy">
-        <p class="eyebrow">Wilbert Bouie Jr.'s Genesis Engineered Interpretations</p>
-        <h1 id="pageTitle">GENESIS<br><span>ENGINEERED</span></h1>
-        <h2>Enter the Blueprint</h2>
-        <p class="intro">Genesis Chapter 1, read through an engineering lens.</p>
-      </div>
+      <section id="portal-section" class="portal-section" hidden aria-label="Six days of the blueprint">
+        <div class="portal-heading">
+          <h2>Choose a Day</h2>
+          <p>Day 1 is open. Each day gates the next.</p>
+        </div>
 
-      <button id="liftGate" class="gate-button" type="button">
-        <span>ENTER THE ENGINE <b>→</b></span>
-        <small>Lift the gate · Begin the journey</small>
-      </button>
-      <div class="scene-label">SYSTEM READY · BLUEPRINT ONLINE</div>
-    </section>
+        <div class="card-grid" id="card-grid" role="list">
+          <a class="day-card" data-day="1" href="day-1.html" role="listitem" tabindex="0">
+            <span class="num">01</span>
+            <span class="label">Light &amp; Divide</span>
+            <span class="status">Unlocked</span>
+          </a>
+          <a class="day-card" data-day="2" href="day-2.html" role="listitem" tabindex="0">
+            <span class="num">02</span>
+            <span class="label">Sky &amp; Waters</span>
+            <span class="status">Locked</span>
+          </a>
+          <a class="day-card" data-day="3" href="day-3.html" role="listitem" tabindex="0">
+            <span class="num">03</span>
+            <span class="label">Land &amp; Growth</span>
+            <span class="status">Locked</span>
+          </a>
+          <a class="day-card" data-day="4" href="day-4.html" role="listitem" tabindex="0">
+            <span class="num">04</span>
+            <span class="label">Lights &amp; Seasons</span>
+            <span class="status">Locked</span>
+          </a>
+          <a class="day-card" data-day="5" href="day-5.html" role="listitem" tabindex="0">
+            <span class="num">05</span>
+            <span class="label">Sea &amp; Sky Life</span>
+            <span class="status">Locked</span>
+          </a>
+          <a class="day-card" data-day="6" href="day-6.html" role="listitem" tabindex="0">
+            <span class="num">06</span>
+            <span class="label">Land Life &amp; Rest</span>
+            <span class="status">Locked</span>
+          </a>
+        </div>
+      </section>
+    </main>
 
-    <section id="portal" class="portal-section" hidden aria-labelledby="portalTitle">
-      <div class="portal-heading">
-        <p class="eyebrow">Blueprint Portal</p>
-        <h2 id="portalTitle">Six Days. One Engineered Design.</h2>
-        <p>Select a day to enter its interpretation.</p>
-      </div>
-      <div class="day-grid">
-        <a class="day-card day-1" href="day-1.html"><span class="day-number">01</span><span class="day-icon">◐</span><h3>Separate the Waters</h3><p>Day One · Light and separation</p><span class="card-link">Enter day →</span></a>
-        <a class="day-card day-2" href="day-2.html"><span class="day-number">02</span><span class="day-icon">◒</span><h3>Expansion Above</h3><p>Day Two · The firmament</p><span class="card-link">Enter day →</span></a>
-        <a class="day-card day-3" href="day-3.html"><span class="day-number">03</span><span class="day-icon">◓</span><h3>Land and Seed</h3><p>Day Three · Systems emerge</p><span class="card-link">Enter day →</span></a>
-        <a class="day-card day-4" href="day-4.html"><span class="day-number">04</span><span class="day-icon">☼</span><h3>Lights in the Sky</h3><p>Day Four · Time and order</p><span class="card-link">Enter day →</span></a>
-        <a class="day-card day-5" href="day-5.html"><span class="day-number">05</span><span class="day-icon">◉</span><h3>Life in Motion</h3><p>Day Five · Water and wing</p><span class="card-link">Enter day →</span></a>
-        <a class="day-card day-6" href="day-6.html"><span class="day-number">06</span><span class="day-icon">✦</span><h3>Humanity and Purpose</h3><p>Day Six · The complete system</p><span class="card-link">Enter day →</span></a>
-      </div>
-      <button id="closePortal" class="text-button" type="button">← Return to the gate</button>
-    </section>
-  </main>
-  <script src="assets/app.js"></script>
+    <footer class="site-footer">
+      <p class="credit-line">Genesis Engineered Interpretations — a reading by <strong>Wilbert Bouie Jr.</strong></p>
+    </footer>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/app.js"></script>
 </body>
 </html>

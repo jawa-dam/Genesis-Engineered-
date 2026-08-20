@@ -1,22 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Day 2 | Genesis Engineered</title><link rel="stylesheet" href="assets/styles.css"></head>
-<body data-day="2" class="day-page">
-<div class="progress-bar"><span class="progress-label">Your Progress</span><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div><strong id="progressCount">0/6</strong></div>
-<main class="day-page-shell">
-  <div class="day-atmosphere"></div>
-  <article class="day-content">
-    <p class="eyebrow">Wilbert Bouie Jr. · Genesis Engineered · Day 2</p>
-    <h1>Expansion Above</h1><p class="day-intro">The firmament forms a designed boundary, creating structure between the waters.</p>
-    <div class="content-placeholder"><span>YOUR DAY 2 INTERPRETATION</span><p>Replace this starter section with your complete Day 2 HTML content.</p></div>
-  </article>
-  <section id="unlockPanel" class="unlock-panel" aria-live="polite">
-    <div class="timer-orbit"><span id="countdown">05:00</span></div>
-    <strong class="timer-kicker">NEXT GATE SEQUENCE</strong>
-    <p id="timerMessage">Day 3 will unlock when the countdown reaches zero.</p>
-    <button id="speedTimer" class="speed-button" type="button">〰 SPEED UP THE WATER <small>Remove 6 seconds</small></button>
-  </section>
-  <a class="text-button" href="index.html#portal">← Return to the blueprint portal</a>
-</main>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Day 2 — Sky &amp; Waters · Genesis Engineered</title>
+<meta name="description" content="Day 2 of the Genesis Engineered blueprint: Sky &amp; Waters." />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="stage" data-day-page="2">
+  <div class="blueprint-grid" aria-hidden="true"></div>
+  <div class="atmosphere" aria-hidden="true">
+    <span class="ray ray--a"></span>
+    <span class="ray ray--b"></span>
+    <span class="mist mist--low"></span>
+    <span class="water-line"></span>
+  </div>
+
+  <div class="wrap">
+    <header class="masthead">
+      <span>GEI // DAY-02</span>
+      <span class="ref" id="progress-track" aria-live="polite">
+        <span class="progress-dot" data-day="1"></span><span class="progress-dot" data-day="2"></span><span class="progress-dot" data-day="3"></span><span class="progress-dot" data-day="4"></span><span class="progress-dot" data-day="5"></span><span class="progress-dot" data-day="6"></span>
+        <span class="progress-label" id="progress-label">0/6</span>
+      </span>
+    </header>
+
+    <main id="main">
+      <div class="day-header">
+        <a class="back-link" href="index.html">&larr; Back to Portal</a>
+        <div class="day-title-block">
+          <span class="day-eyebrow">Day 2 of 6</span>
+          <h1 class="day-title">Sky &amp; Waters</h1>
+        </div>
+        <span aria-hidden="true"></span>
+      </div>
+
+      <div class="day-main">
+
+        <section class="content-panel" aria-labelledby="content-heading">
+          <h2 id="content-heading">Interpretation</h2>
+          <p class="editor-note">Paste your full Day 2 interpretation content in the block below. This section renders even if JavaScript is disabled.</p>
+          <div class="content-slot">
+            <!-- ============================================================
+                 PASTE YOUR DAY 2 CONTENT HERE
+                 Replace this placeholder paragraph with your full write-up.
+                 Headings, paragraphs, lists, and images are all fine here.
+                 ============================================================ -->
+            <p>Your Day 2 interpretation content goes here.</p>
+          </div>
+        </section>
+
+        <section id="gate-panel" class="gate-panel" aria-labelledby="gate-heading">
+          <p class="gate-label" id="gate-heading">Gate Status</p>
+          <p class="timer-display" id="timer-display" aria-live="polite">05:00</p>
+          <p class="timer-sub" id="timer-status">Day 3 unlocks when the gate reaches 00:00.</p>
+          <button type="button" id="speed-up-btn" class="btn speed-btn">Speed Up the Water</button>
+          <p class="no-js-note no-js-fallback">JavaScript is off, so the countdown can't run automatically — the gate opens once you return with JavaScript enabled, or you may navigate back to the portal at any time.</p>
+        </section>
+
+        <section id="completion-panel" class="completion-panel" hidden>
+          <h2>Gate Open</h2>
+          <p>Day 3 is unlocked. Head back to the portal to continue.</p>
+          <a class="btn btn-secondary" href="index.html">Return to Portal</a>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="credit-line">Genesis Engineered Interpretations — a reading by <strong>Wilbert Bouie Jr.</strong></p>
+    </footer>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
 <script src="assets/app.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2de89173e061916',t:'MTc4NzE5ODg5Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+</body>
+</html>
