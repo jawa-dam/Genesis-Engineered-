@@ -1,6 +1,4 @@
-# Genesis-Engineered-===== README.md =====
-```md
-# Genesis Engineered — GitHub starter project
+# Genesis Engineered 3.0 — GitHub starter project
 
 This folder contains the seven HTML pages:
 
@@ -41,4 +39,33 @@ Change the final number to the matching day. If your existing pages already have
 
 The links are relative (`day-1.html`, etc.), so they work on GitHub Pages and on a local server. Progress is saved in the visitor's browser with `localStorage`.
 
+## Change the random hero images
+
+Open `assets/app.js` and edit the `HERO_IMAGES` array near the top. The starter project now includes six local PNGs in `assets/images/`, which prevents GitHub Pages or a browser preview from blocking remote images:
+
+```js
+const HERO_IMAGES = [
+  'assets/images/hero-1.png',
+  'assets/images/hero-2.png',
+  'assets/images/hero-3.png'
+];
 ```
+
+You can replace those files with your own PNGs, add more files, or use full URLs instead:
+
+```js
+const HERO_IMAGES = [
+  'https://your-website.com/first-image.png',
+  'https://your-website.com/second-image.png'
+];
+```
+
+One image is chosen randomly each time `index.html` is refreshed. The images are not displayed as a public gallery.
+
+## Day-card sounds and progress
+
+When a visitor taps a day card, the progress bar activates immediately and the card briefly flashes before opening the page. The sound is generated in the browser with the Web Audio API, so no audio files are required. Day 1 uses layered low impacts and filtered noise for a mountain-rubble effect; the other days use distinct rising tones. Browsers require the sound to begin from a user tap, which is why the effect is attached to the card click.
+
+## Timed day unlocks
+
+Day 1 is available immediately. Days 2–6 unlock in numerical order. Each day starts a persistent five-minute countdown when its page is opened. The **Speed Up the Water** button removes six seconds and plays a water sound. The countdown uses browser `localStorage`, so refreshing or leaving the page does not reset it. At zero, the timer remains at `00:00` and the next day is marked unlocked. Random blueprint messages and water-line motion keep the waiting screen active.
